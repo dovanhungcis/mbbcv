@@ -1,0 +1,5 @@
+mediabridge
+user: hungdv
+pass: hungdv
+pass pharse: hungdv
+File khoa cong khai
