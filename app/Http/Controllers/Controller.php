@@ -8,18 +8,29 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Models\danhsachkynangchuyenmon;
 use App\Models\danhsachsothich;
+
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-    public function welcome(){
-    	$chuyennganh=danhsachkynangchuyenmon::all();
-      $sothich=danhsachsothich::all();
-    	return view('welcome',['chuyennganh'=>$chuyennganh,'sothich'=>$sothich]);
+
+    public function welcome()
+    {
+        $chuyennganh = danhsachkynangchuyenmon::all();
+        $sothich = danhsachsothich::all();
+        $viewData = [
+            'chuyennganh' => $chuyennganh,
+            'sothich' => $sothich
+        ];
+        return view('welcome', $viewData);
     }
-    public function themkn(){
-    	 
+
+    public function themkn()
+    {
+
     }
-    public function themda(){
-       
+
+    public function themda()
+    {
+
     }
 }
