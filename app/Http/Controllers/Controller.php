@@ -6,8 +6,8 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use App\Models\danhsachkynangchuyenmon;
-use App\Models\danhsachsothich;
+use App\Models\KyNangChuyenMon;
+use App\Models\SoThich;
 
 class Controller extends BaseController
 {
@@ -15,8 +15,8 @@ class Controller extends BaseController
 
     public function welcome()
     {
-        $chuyennganh = danhsachkynangchuyenmon::all();
-        $sothich = danhsachsothich::all();
+        $chuyennganh = KyNangChuyenMon::all();
+        $sothich = SoThich::all();
         $viewData = [
             'chuyennganh' => $chuyennganh,
             'sothich' => $sothich
